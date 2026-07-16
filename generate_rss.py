@@ -200,7 +200,7 @@ def main() -> None:
     session.headers.update(HEADERS)
 
     print(f"Téléchargement de {SOURCE_URL}")
-    response = session.get(SOURCE_URL, timeout=30)
+    response = session.get(SOURCE_URL, timeout=90)
     response.raise_for_status()
 
     articles = extract_articles(response.text, session)
